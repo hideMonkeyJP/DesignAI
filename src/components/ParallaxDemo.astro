@@ -1,0 +1,65 @@
+---
+---
+
+<div class="parallax-container">
+  <div class="parallax-layer back"></div>
+  <div class="parallax-layer middle"></div>
+  <div class="parallax-content">
+    <h2>パララックスデモ</h2>
+    <p>スクロールして効果を確認</p>
+  </div>
+</div>
+
+<style>
+  .parallax-container {
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .parallax-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .back {
+    background: linear-gradient(45deg, #2c3e50, #3498db);
+    transform: translateZ(-1px) scale(2);
+  }
+
+  .middle {
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="rgba(255,255,255,0.1)"/></svg>') repeat;
+    transform: translateZ(-0.5px) scale(1.5);
+  }
+
+  .parallax-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+  }
+
+  @media (max-width: 768px) {
+    .parallax-container {
+      height: 300px;
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener('scroll', () => {
+    const container = document.querySelector('.parallax-container');
+    if (!container) return;
+    
+    const scrolled = window.pageYOffset;
+    const rate = scrolled * 0.5;
+    
+    document.querySelector('.back')?.setAttribute('style', `transform: translate3d(0, ${rate}px, -1px) scale(2)`);
+    document.querySelector('.middle')?.setAttribute('style', `transform: translate3d(0, ${rate * 0.7}px, -0.5px) scale(1.5)`);
+  });
+</script>

@@ -1,0 +1,85 @@
+---
+import DocsLayout from '../layouts/DocsLayout.astro';
+import DemoContainer from '../components/DemoContainer.astro';
+import CyberpunkDemo from '../components/CyberpunkDemo.astro';
+---
+
+<DocsLayout title="サイバーパンクテーマ - デザインAI">
+  <h1 class="page-title">10. サイバーパンクテーマ</h1>
+
+  <div class="section">
+    <div class="content-box">
+      <h2 class="section-title">サイバーパンクデザインの特徴</h2>
+      <p>
+        サイバーパンクデザインは、未来的でエッジの効いた視覚表現を特徴とします。
+        ネオンカラーやグリッチエフェクト、デジタルな要素を組み合わせることで、
+        ハイテクでディストピア的な世界観を演出します。
+      </p>
+    </div>
+
+    <DemoContainer title="サイバーパンクデザインのデモ">
+      <CyberpunkDemo />
+    </DemoContainer>
+
+    <div class="tip-box">
+      <strong>💡 デザインのポイント:</strong>
+      ネオンカラーの使用は控えめにし、暗い背景とのコントラストを
+      効果的に活用することで、より洗練された印象を与えられます。
+    </div>
+  </div>
+
+  <div class="section">
+    <h2 class="section-title">実装のポイント</h2>
+    <div class="content-box">
+      <h3>1. カラーパレット</h3>
+      <p>
+        以下のような色を基調とします：
+      </p>
+      <ul>
+        <li>背景: 濃い黒 (#0a0a0a)</li>
+        <li>アクセント1: ネオンピンク (#ff00ff)</li>
+        <li>アクセント2: サイバーブルー (#00ffff)</li>
+        <li>テキスト: 白 (#ffffff)</li>
+      </ul>
+
+      <h3>2. グリッチエフェクト</h3>
+      <p>
+        テキストやイメージにグリッチ効果を加えることで、
+        デジタルな異常や歪みを表現します。CSSアニメーションと
+        疑似要素を組み合わせて実装します。
+      </p>
+
+      <h3>3. アニメーション</h3>
+      <p>
+        ネオンの明滅やスキャンライン、ホログラム的な効果など、
+        未来的な動きを取り入れることで世界観を強化します。
+      </p>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2 class="section-title">AIへの指示例</h2>
+    <div class="content-box">
+      <pre><code>「サイバーパンク風のデザインを作成してください。
+以下の要素を含めてください：
+- ネオンカラーを効果的に使用
+- グリッチエフェクトのアニメーション
+- デジタルなテクスチャやパターン
+- 未来的なUIコンポーネント
+- ダークモードベースの配色」</code></pre>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2 class="section-title">使用に適したシーン</h2>
+    <div class="content-box">
+      <ul>
+        <li>ゲームのウェブサイト</li>
+        <li>テクノロジー関連のプロモーション</li>
+        <li>デジタルアートのポートフォリオ</li>
+        <li>SF作品のランディングページ</li>
+        <li>電子音楽のイベントサイト</li>
+      </ul>
+    </div>
+  </div>
+</DocsLayout>

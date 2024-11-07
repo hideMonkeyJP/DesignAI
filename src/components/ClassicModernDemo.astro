@@ -1,0 +1,180 @@
+---
+---
+
+<div class="classic-modern-demo">
+  <header class="demo-header">
+    <div class="logo">Serif</div>
+    <nav class="nav">
+      <a href="#" class="nav-link">Gallery</a>
+      <a href="#" class="nav-link">About</a>
+      <a href="#" class="nav-link">Contact</a>
+    </nav>
+  </header>
+
+  <div class="content">
+    <div class="text-section">
+      <h2 class="serif-title">Classic & Modern</h2>
+      <p class="description">伝統的な要素と現代的なレイアウトの融合</p>
+    </div>
+
+    <div class="grid-section">
+      <div class="grid-item">
+        <div class="number">01</div>
+        <h3>Typography</h3>
+        <p>セリフ体による品格</p>
+      </div>
+      <div class="grid-item">
+        <div class="number">02</div>
+        <h3>Layout</h3>
+        <p>モダンな配置</p>
+      </div>
+      <div class="grid-item">
+        <div class="number">03</div>
+        <h3>Balance</h3>
+        <p>調和のとれた設計</p>
+      </div>
+    </div>
+
+    <div class="cta-section">
+      <button class="classic-button">Explore More</button>
+    </div>
+  </div>
+</div>
+
+<style>
+  .classic-modern-demo {
+    background: #ffffff;
+    color: #1a1a1a;
+    min-height: 400px;
+    padding: 2rem;
+    font-family: 'Georgia', serif;
+  }
+
+  .demo-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #e0e0e0;
+  }
+
+  .logo {
+    font-size: 1.8rem;
+    font-weight: normal;
+    letter-spacing: 2px;
+  }
+
+  .nav {
+    display: flex;
+    gap: 2rem;
+  }
+
+  .nav-link {
+    color: #1a1a1a;
+    text-decoration: none;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+  }
+
+  .nav-link:hover {
+    color: #666;
+  }
+
+  .content {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .text-section {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  .serif-title {
+    font-size: 3rem;
+    font-weight: normal;
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+  }
+
+  .description {
+    font-size: 1.2rem;
+    color: #666;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+
+  .grid-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 4rem;
+  }
+
+  .grid-item {
+    padding: 2rem;
+    background: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    transition: transform 0.3s ease;
+  }
+
+  .grid-item:hover {
+    transform: translateY(-5px);
+  }
+
+  .number {
+    font-size: 2rem;
+    color: #999;
+    margin-bottom: 1rem;
+    font-family: 'Georgia', serif;
+  }
+
+  .grid-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: normal;
+  }
+
+  .grid-item p {
+    color: #666;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+
+  .cta-section {
+    text-align: center;
+  }
+
+  .classic-button {
+    background: none;
+    border: 1px solid #1a1a1a;
+    color: #1a1a1a;
+    padding: 1rem 3rem;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Georgia', serif;
+  }
+
+  .classic-button:hover {
+    background: #1a1a1a;
+    color: #ffffff;
+  }
+
+  @media (max-width: 768px) {
+    .nav {
+      display: none;
+    }
+
+    .grid-section {
+      grid-template-columns: 1fr;
+    }
+
+    .serif-title {
+      font-size: 2rem;
+    }
+  }
+</style>

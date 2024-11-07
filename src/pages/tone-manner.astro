@@ -1,0 +1,80 @@
+---
+import DocsLayout from '../layouts/DocsLayout.astro';
+import DemoContainer from '../components/DemoContainer.astro';
+import MonochromeDemo from '../components/MonochromeDemo.astro';
+---
+
+<DocsLayout title="モノトーンデザイン - デザインAI">
+  <h1 class="page-title">3. モノトーンデザイン</h1>
+
+  <div class="section">
+    <div class="content-box">
+      <h2 class="section-title">モノトーンデザインの特徴</h2>
+      <p>
+        モノトーンデザインは、白黒を基調とした洗練された印象を与えるデザインスタイルです。
+        シンプルながらも強い印象を残し、コンテンツの本質を際立たせることができます。
+      </p>
+    </div>
+
+    <DemoContainer title="モノトーンデザインのデモ">
+      <MonochromeDemo />
+    </DemoContainer>
+
+    <div class="tip-box">
+      <strong>💡 デザインのポイント:</strong>
+      コントラストを効果的に活用し、視認性と美しさのバランスを取ることが重要です。
+    </div>
+  </div>
+
+  <div class="section">
+    <h2 class="section-title">実装のポイント</h2>
+    <div class="content-box">
+      <h3>1. カラーパレットの設定</h3>
+      <p>
+        純粋な白黒だけでなく、グレースケールの中間色を効果的に使用することで、
+        深みのある表現が可能になります。特に以下の点に注意を払います：
+      </p>
+      <ul>
+        <li>メインカラー: #000000（黒）</li>
+        <li>アクセントカラー: #333333, #666666</li>
+        <li>背景色: #FFFFFF, #F5F5F5</li>
+      </ul>
+
+      <h3>2. タイポグラフィ</h3>
+      <p>
+        フォントの太さやサイズの違いを活用して、視覚的な階層構造を作ります。
+        特に見出しと本文のコントラストは重要な要素です。
+      </p>
+
+      <h3>3. ホワイトスペース</h3>
+      <p>
+        余白を効果的に活用することで、コンテンツの視認性を高め、
+        洗練された印象を強調することができます。
+      </p>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2 class="section-title">AIへの指示例</h2>
+    <div class="content-box">
+      <pre><code>「モノトーンを基調としたミニマルなデザインを作成してください。
+以下の要素を含めてください：
+- 白黒のコントラストを活かした視覚的な強さ
+- グレースケールでの階層構造
+- 適度な余白によるエレガントな印象
+- タイポグラフィの効果的な使用」</code></pre>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2 class="section-title">使用に適したシーン</h2>
+    <div class="content-box">
+      <ul>
+        <li>ファッションブランドのウェブサイト</li>
+        <li>アートギャラリーやポートフォリオ</li>
+        <li>高級ブランドのランディングページ</li>
+        <li>モダンなレストランのウェブサイト</li>
+      </ul>
+    </div>
+  </div>
+</DocsLayout>

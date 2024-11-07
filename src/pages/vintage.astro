@@ -1,0 +1,84 @@
+---
+import DocsLayout from '../layouts/DocsLayout.astro';
+import DemoContainer from '../components/DemoContainer.astro';
+import VintageDemo from '../components/VintageDemo.astro';
+---
+
+<DocsLayout title="ヴィンテージ加工 - デザインAI">
+  <h1 class="page-title">8. ヴィンテージ加工</h1>
+
+  <div class="section">
+    <div class="content-box">
+      <h2 class="section-title">ヴィンテージ加工の特徴</h2>
+      <p>
+        ヴィンテージ加工は、写真や画像に時代感や懐かしさを演出する
+        デザインテクニックです。セピア調やモノクロームなどの
+        フィルター効果を用いて、クラシカルな雰囲気を作り出します。
+      </p>
+    </div>
+
+    <DemoContainer title="ヴィンテージ加工のデモ">
+      <VintageDemo />
+    </DemoContainer>
+
+    <div class="tip-box">
+      <strong>💡 加工のポイント:</strong>
+      過度な効果は避け、自然な風合いを残すことで、より本物らしい
+      ヴィンテージ感を演出できます。
+    </div>
+  </div>
+
+  <div class="section">
+    <h2 class="section-title">実装のポイント</h2>
+    <div class="content-box">
+      <h3>1. フィルター効果</h3>
+      <p>
+        CSSのfilterプロパティを使用して、以下のような効果を組み合わせます：
+      </p>
+      <ul>
+        <li>sepia(): セピア調の色合いを追加</li>
+        <li>contrast(): コントラストを調整</li>
+        <li>brightness(): 明るさを調整</li>
+        <li>grayscale(): モノクローム効果を追加</li>
+      </ul>
+
+      <h3>2. テクスチャの追加</h3>
+      <p>
+        微細なノイズや紙の質感を表現するオーバーレイを使用することで、
+        より本物らしいヴィンテージ感を演出できます。
+      </p>
+
+      <h3>3. タイポグラフィ</h3>
+      <p>
+        セリフ体フォントや装飾的な書体を使用することで、
+        時代感のある雰囲気を強調できます。
+      </p>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2 class="section-title">AIへの指示例</h2>
+    <div class="content-box">
+      <pre><code>「ヴィンテージ風の写真加工効果を適用してください。
+以下の要素を含めてください：
+- セピアトーンのフィルター効果
+- 適度なコントラストと明度調整
+- 古い写真のような質感
+- クラシカルなタイポグラフィ
+- レトロな装飾要素」</code></pre>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2 class="section-title">使用に適したシーン</h2>
+    <div class="content-box">
+      <ul>
+        <li>アンティークショップのウェブサイト</li>
+        <li>歴史的なコンテンツの紹介</li>
+        <li>レトロなカフェやバーの宣伝</li>
+        <li>ノスタルジックな商品のプロモーション</li>
+        <li>ヴィンテージファッションのポートフォリオ</li>
+      </ul>
+    </div>
+  </div>
+</DocsLayout>

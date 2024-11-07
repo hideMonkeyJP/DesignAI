@@ -1,0 +1,181 @@
+---
+---
+
+<div class="natural-demo">
+  <header class="demo-header">
+    <div class="logo">Organic</div>
+    <nav class="nav">
+      <a href="#" class="nav-link">About</a>
+      <a href="#" class="nav-link">Products</a>
+      <a href="#" class="nav-link">Contact</a>
+    </nav>
+  </header>
+
+  <div class="content">
+    <div class="card-grid">
+      <div class="card beige">
+        <div class="card-content">
+          <h3>Natural</h3>
+          <p>温かみのある配色</p>
+        </div>
+      </div>
+      <div class="card sage">
+        <div class="card-content">
+          <h3>Organic</h3>
+          <p>優しい印象を与える</p>
+        </div>
+      </div>
+      <div class="card cream">
+        <div class="card-content">
+          <h3>Gentle</h3>
+          <p>落ち着いた雰囲気</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-section">
+      <h2>ナチュラルカラー</h2>
+      <p>自然をイメージした温かみのある配色で、リラックスした雰囲気を演出します。</p>
+      <button class="cta-button">詳しく見る</button>
+    </div>
+  </div>
+</div>
+
+<style>
+  .natural-demo {
+    background-color: #FAF7F2;
+    min-height: 400px;
+    padding: 2rem;
+    color: #5C4B51;
+  }
+
+  .demo-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+    color: #8B7355;
+    font-weight: 600;
+  }
+
+  .nav {
+    display: flex;
+    gap: 2rem;
+  }
+
+  .nav-link {
+    color: #8B7355;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+  }
+
+  .nav-link:hover {
+    color: #5C4B51;
+  }
+
+  .content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+
+  .card {
+    aspect-ratio: 1;
+    border-radius: 12px;
+    padding: 1.5rem;
+    display: flex;
+    align-items: flex-end;
+    transition: transform 0.3s ease;
+  }
+
+  .card:hover {
+    transform: translateY(-5px);
+  }
+
+  .beige {
+    background-color: #E5D1B8;
+  }
+
+  .sage {
+    background-color: #B5C9B7;
+  }
+
+  .cream {
+    background-color: #F5E6D3;
+  }
+
+  .card-content {
+    color: #5C4B51;
+  }
+
+  .card-content h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .card-content p {
+    font-size: 0.9rem;
+    opacity: 0.8;
+  }
+
+  .text-section {
+    padding: 2rem;
+  }
+
+  .text-section h2 {
+    font-size: 2rem;
+    color: #8B7355;
+    margin-bottom: 1rem;
+  }
+
+  .text-section p {
+    margin-bottom: 2rem;
+    line-height: 1.6;
+  }
+
+  .cta-button {
+    background-color: #8B7355;
+    color: white;
+    border: none;
+    padding: 0.8rem 2rem;
+    border-radius: 30px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .cta-button:hover {
+    background-color: #5C4B51;
+  }
+
+  @media (max-width: 768px) {
+    .nav {
+      display: none;
+    }
+
+    .content {
+      grid-template-columns: 1fr;
+    }
+
+    .card-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .text-section {
+      text-align: center;
+      padding: 1rem;
+    }
+  }
+</style>

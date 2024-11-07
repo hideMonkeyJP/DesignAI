@@ -1,0 +1,82 @@
+---
+import DocsLayout from '../layouts/DocsLayout.astro';
+import DemoContainer from '../components/DemoContainer.astro';
+import HandDrawnDemo from '../components/HandDrawnDemo.astro';
+---
+
+<DocsLayout title="手描き風デザイン - デザインAI">
+  <h1 class="page-title">4. 手描き風デザイン</h1>
+
+  <div class="section">
+    <div class="content-box">
+      <h2 class="section-title">手描き風デザインの特徴</h2>
+      <p>
+        手描き風デザインは、親しみやすさとユニークな個性を演出するデザインスタイルです。
+        デジタルな印象を和らげ、より人間味のある温かい雰囲気を作り出すことができます。
+      </p>
+    </div>
+
+    <DemoContainer title="手描き風デザインのデモ">
+      <HandDrawnDemo />
+    </DemoContainer>
+
+    <div class="tip-box">
+      <strong>💡 デザインのポイント:</strong>
+      完璧な直線や形を避け、あえて歪みや揺らぎを取り入れることで、自然な手描き感を演出します。
+    </div>
+  </div>
+
+  <div class="section">
+    <h2 class="section-title">実装のポイント</h2>
+    <div class="content-box">
+      <h3>1. フォントの選択</h3>
+      <p>
+        手書き風フォントを使用することで、全体的な雰囲気を統一します。
+        ただし、可読性とのバランスを考慮することが重要です。
+      </p>
+
+      <h3>2. イラストレーション</h3>
+      <p>
+        SVGを活用して手描き風のイラストを作成します。
+        stroke-dasharray や path アニメーションを使用することで、
+        描き出されるような動的な表現も可能です。
+      </p>
+
+      <h3>3. アニメーション</h3>
+      <p>
+        要素に微細な揺れや傾きを加えることで、より自然な手描き感を演出できます。
+        ただし、過度なアニメーションは避け、控えめに使用することがポイントです。
+      </p>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2 class="section-title">AIへの指示例</h2>
+    <div class="content-box">
+      <pre><code>「手描き風の要素を取り入れたデザインを作成してください。
+以下の要素を含めてください：
+- 手書き風のフォントとイラスト
+- 自然な揺らぎのあるライン
+- 温かみのある配色
+- カジュアルで親しみやすい雰囲気」</code></pre>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2 class="section-title">使用に適したシーン</h2>
+    <div class="content-box">
+      <ul>
+        <li>子供向けウェブサイト</li>
+        <li>カフェやレストランのメニュー</li>
+        <li>クリエイティブなポートフォリオ</li>
+        <li>教育関連のコンテンツ</li>
+        <li>手作り商品のECサイト</li>
+        <li>アート教室のウェブサイト</li>
+        <li>イラストレーターのポートフォリオ</li>
+        <li>DIY関連のブログ</li>
+        <li>子供服ブランドのサイト</li>
+        <li>クラフトマーケットのプラットフォーム</li>
+      </ul>
+    </div>
+  </div>
+</DocsLayout>

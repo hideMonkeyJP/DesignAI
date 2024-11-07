@@ -1,0 +1,80 @@
+---
+import DocsLayout from '../layouts/DocsLayout.astro';
+import DemoContainer from '../components/DemoContainer.astro';
+import ParallaxDemo from '../components/ParallaxDemo.astro';
+---
+
+<DocsLayout title="パララックス効果 - デザインAI">
+  <h1 class="page-title">1. モダンなパララックス効果</h1>
+
+  <div class="section">
+    <div class="content-box">
+      <h2 class="section-title">パララックス効果とは</h2>
+      <p>
+        パララックス効果は、スクロールに応じて背景と前景が異なる速度で動くことで、
+        立体感と奥行きを演出するデザインテクニックです。
+      </p>
+    </div>
+
+    <DemoContainer title="パララックス効果のデモ">
+      <ParallaxDemo />
+    </DemoContainer>
+
+    <div class="tip-box">
+      <strong>🎯 ポイント:</strong>
+      パララックス効果は控えめに使用することで、より洗練された印象を与えることができます。
+    </div>
+  </div>
+
+  <div class="section">
+    <h2 class="section-title">実装のポイント</h2>
+    <div class="content-box">
+      <h3>1. スクロール速度の設定</h3>
+      <p>
+        背景要素と前景要素の移動速度を適切に設定することで、自然な奥行き感を演出できます。
+        一般的に、背景は前景よりもゆっくりと動かすことで効果的です。
+      </p>
+
+      <h3>2. パフォーマンスの最適化</h3>
+      <p>
+        パララックス効果は処理負荷が高くなる可能性があるため、
+        transform3d()やwill-changeプロパティを活用して、
+        スムーズなアニメーションを実現することが重要です。
+      </p>
+
+      <h3>3. モバイル対応</h3>
+      <p>
+        モバイルデバイスでは、パララックス効果を無効化するか、
+        よりシンプルな実装に切り替えることで、快適な閲覧体験を提供できます。
+      </p>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2 class="section-title">AIへの指示例</h2>
+    <div class="content-box">
+      <pre><code>「背景画像にパララックス効果を適用し、
+スクロール時に奥行きのある演出を加えてください。
+速度は控えめに設定し、
+モバイルデバイスでは通常のスクロールに切り替えてください。」</code></pre>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2 class="section-title">使用に適したシーン</h2>
+    <div class="content-box">
+      <ul>
+        <li>ポートフォリオサイト</li>
+        <li>デジタルストーリーテリング</li>
+        <li>製品紹介ページ</li>
+        <li>観光・旅行関連サイト</li>
+        <li>イベントのランディングページ</li>
+        <li>不動産の物件紹介</li>
+        <li>ゲームのプロモーションサイト</li>
+        <li>レストラン・カフェのウェブサイト</li>
+        <li>写真家のポートフォリオ</li>
+        <li>ブランドストーリーの紹介ページ</li>
+      </ul>
+    </div>
+  </div>
+</DocsLayout>

@@ -1,0 +1,345 @@
+---
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title} | デザインAIドキュメント</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  </head>
+  <body>
+    <div class="docs-container">
+      <header class="header">
+        <div class="header-content">
+          <a href="/" class="logo">デザインAI<span class="logo-accent">ドキュメント</span></a>
+          <button id="menuToggle" class="menu-toggle">
+            <span class="menu-icon"></span>
+          </button>
+        </div>
+      </header>
+
+      <div class="content-wrapper">
+        <aside class="sidebar" id="sidebar">
+          <nav class="nav-menu">
+            <div class="menu-section">
+              <h3>基本ガイド</h3>
+              <ul>
+                <li><a href="/">はじめに</a></li>
+                <li><a href="/basics">デザインAIの基礎</a></li>
+              </ul>
+            </div>
+            
+            <div class="menu-section">
+              <h3>レイアウトテクニック</h3>
+              <ul>
+                <li><a href="/parallax">1. パララックス効果</a></li>
+                <li><a href="/carousel">2. カルーセル</a></li>
+                <li><a href="/tone-manner">3. モノトーン</a></li>
+                <li><a href="/handdrawn">4. 手描き風</a></li>
+                <li><a href="/hero-section">5. ヒーロー</a></li>
+              </ul>
+            </div>
+
+            <div class="menu-section">
+              <h3>カラー & スタイル</h3>
+              <ul>
+                <li><a href="/natural-colors">6. ナチュラル</a></li>
+                <li><a href="/infographics">7. インフォグラフィック</a></li>
+                <li><a href="/vintage">8. ヴィンテージ</a></li>
+              </ul>
+            </div>
+
+            <div class="menu-section">
+              <h3>特殊レイアウト</h3>
+              <ul>
+                <li><a href="/landing-page">9. ランディング</a></li>
+                <li><a href="/cyberpunk">10. サイバーパンク</a></li>
+                <li><a href="/classic-modern">11. クラシック&モダン</a></li>
+                <li><a href="/diagonal-grid">12. 対角線グリッド</a></li>
+              </ul>
+            </div>
+          </nav>
+        </aside>
+
+        <main class="main-content">
+          <slot />
+        </main>
+      </div>
+    </div>
+
+    <script>
+      const menuToggle = document.getElementById('menuToggle');
+      const sidebar = document.getElementById('sidebar');
+      
+      menuToggle?.addEventListener('click', () => {
+        sidebar?.classList.toggle('active');
+        menuToggle?.classList.toggle('active');
+      });
+    </script>
+
+    <style>
+      :root {
+        --primary-color: #2a2a2a;
+        --accent-color: #4a90e2;
+        --background-color: #ffffff;
+        --sidebar-background: #f5f5f5;
+        --text-color: #333333;
+        --border-color: #e0e0e0;
+        --header-height: 42px;
+        --sidebar-width: 200px;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        line-height: 1.4;
+        color: var(--text-color);
+        background-color: var(--background-color);
+      }
+
+      .docs-container {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: var(--header-height);
+        background-color: var(--primary-color);
+        color: white;
+        z-index: 1000;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+      }
+
+      .header-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 0.75rem;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .logo {
+        font-size: 1rem;
+        font-weight: bold;
+        color: white;
+        text-decoration: none;
+      }
+
+      .logo-accent {
+        color: var(--accent-color);
+        margin-left: 0.25rem;
+      }
+
+      .content-wrapper {
+        display: flex;
+        flex: 1;
+        margin-top: var(--header-height);
+      }
+
+      .sidebar {
+        width: var(--sidebar-width);
+        height: calc(100vh - var(--header-height));
+        position: fixed;
+        top: var(--header-height);
+        left: 0;
+        background-color: var(--sidebar-background);
+        border-right: 1px solid var(--border-color);
+        overflow-y: auto;
+        transition: transform 0.3s ease;
+        padding: 0.75rem;
+      }
+
+      .nav-menu {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .menu-section {
+        margin-bottom: 0.5rem;
+      }
+
+      .menu-section h3 {
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        color: #666;
+        margin-bottom: 0.4rem;
+        padding-bottom: 0.2rem;
+        border-bottom: 1px solid var(--border-color);
+        font-weight: 600;
+      }
+
+      .nav-menu ul {
+        list-style: none;
+      }
+
+      .nav-menu ul li {
+        margin-bottom: 0.25rem;
+      }
+
+      .nav-menu ul li a {
+        color: var(--text-color);
+        text-decoration: none;
+        font-size: 0.85rem;
+        display: block;
+        padding: 0.2rem 0.4rem;
+        border-radius: 3px;
+        transition: all 0.2s ease;
+      }
+
+      .nav-menu ul li a:hover {
+        color: var(--accent-color);
+        background-color: rgba(74, 144, 226, 0.1);
+      }
+
+      .main-content {
+        flex: 1;
+        margin-left: var(--sidebar-width);
+        padding: 1rem;
+        max-width: calc(100% - var(--sidebar-width));
+      }
+
+      .menu-toggle {
+        display: none;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 0.4rem;
+      }
+
+      .menu-icon {
+        display: block;
+        width: 20px;
+        height: 2px;
+        background-color: white;
+        position: relative;
+        transition: background-color 0.3s ease;
+      }
+
+      .menu-icon::before,
+      .menu-icon::after {
+        content: '';
+        position: absolute;
+        width: 20px;
+        height: 2px;
+        background-color: white;
+        transition: transform 0.3s ease;
+      }
+
+      .menu-icon::before {
+        top: -5px;
+      }
+
+      .menu-icon::after {
+        bottom: -5px;
+      }
+
+      @media (max-width: 768px) {
+        .menu-toggle {
+          display: block;
+        }
+
+        .sidebar {
+          transform: translateX(-100%);
+          z-index: 900;
+        }
+
+        .sidebar.active {
+          transform: translateX(0);
+        }
+
+        .main-content {
+          margin-left: 0;
+          max-width: 100%;
+          padding: 0.75rem;
+        }
+      }
+
+      /* コンテンツスタイル */
+      :global(.page-title) {
+        font-size: 1.5rem;
+        margin-bottom: 0.75rem;
+        color: var(--primary-color);
+        font-weight: 700;
+      }
+
+      :global(.section) {
+        margin-bottom: 1.5rem;
+      }
+
+      :global(.section-title) {
+        font-size: 1.1rem;
+        margin-bottom: 0.5rem;
+        color: var(--primary-color);
+        font-weight: 600;
+      }
+
+      :global(.content-box) {
+        background-color: white;
+        border-radius: 4px;
+        padding: 0.75rem;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+        margin-bottom: 0.75rem;
+      }
+
+      :global(.tip-box) {
+        background-color: #f8f9fa;
+        border-left: 2px solid var(--accent-color);
+        padding: 0.6rem;
+        margin: 0.6rem 0;
+        border-radius: 0 3px 3px 0;
+      }
+
+      :global(code) {
+        background-color: #f4f4f4;
+        padding: 0.1rem 0.2rem;
+        border-radius: 2px;
+        font-family: monospace;
+        font-size: 0.85em;
+      }
+
+      :global(pre) {
+        background-color: #f4f4f4;
+        padding: 0.6rem;
+        border-radius: 3px;
+        overflow-x: auto;
+      }
+
+      :global(pre code) {
+        background-color: transparent;
+        padding: 0;
+      }
+
+      :global(.image-container) {
+        margin: 0.75rem 0;
+        border-radius: 4px;
+        overflow: hidden;
+      }
+
+      :global(.image-container img) {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+    </style>
+  </body>
+</html>

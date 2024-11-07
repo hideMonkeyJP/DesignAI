@@ -1,0 +1,38 @@
+---
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<div class="demo-container">
+  <h3 class="demo-title">{title}</h3>
+  <div class="demo-content">
+    <slot />
+  </div>
+</div>
+
+<style>
+  .demo-container {
+    margin: 1rem 0;
+    border: 1px solid var(--border-color);
+    border-radius: 3px;
+    overflow: hidden;
+  }
+
+  .demo-title {
+    background: #f5f5f5;
+    padding: 0.4rem 0.6rem;
+    margin: 0;
+    border-bottom: 1px solid var(--border-color);
+    font-size: 0.8rem;
+    color: #666;
+  }
+
+  .demo-content {
+    background: white;
+    min-height: 200px;
+    position: relative;
+  }
+</style>

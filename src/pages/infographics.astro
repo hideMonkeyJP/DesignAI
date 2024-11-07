@@ -1,0 +1,78 @@
+---
+import DocsLayout from '../layouts/DocsLayout.astro';
+import DemoContainer from '../components/DemoContainer.astro';
+import InfoGraphicDemo from '../components/InfoGraphicDemo.astro';
+---
+
+<DocsLayout title="インフォグラフィック - デザインAI">
+  <h1 class="page-title">7. インフォグラフィック</h1>
+
+  <div class="section">
+    <div class="content-box">
+      <h2 class="section-title">インフォグラフィックの特徴</h2>
+      <p>
+        インフォグラフィックは、複雑な情報やデータを視覚的に分かりやすく
+        表現するデザイン手法です。図表やアイコン、色彩を効果的に
+        組み合わせることで、情報の理解を促進します。
+      </p>
+    </div>
+
+    <DemoContainer title="インフォグラフィックのデモ">
+      <InfoGraphicDemo />
+    </DemoContainer>
+
+    <div class="tip-box">
+      <strong>💡 デザインのポイント:</strong>
+      情報の階層構造を明確にし、ユーザーが直感的に理解できるよう
+      視覚的な導線を設計することが重要です。
+    </div>
+  </div>
+
+  <div class="section">
+    <h2 class="section-title">実装のポイント</h2>
+    <div class="content-box">
+      <h3>1. データの整理</h3>
+      <p>
+        情報を適切にカテゴリー分けし、優先順位をつけることで、
+        効果的な視覚化が可能になります。
+      </p>
+
+      <h3>2. 視覚要素の選択</h3>
+      <p>
+        グラフ、チャート、アイコンなど、データの性質に
+        適した視覚要素を選択します。
+      </p>
+
+      <h3>3. アニメーション</h3>
+      <p>
+        適度なアニメーションを加えることで、情報の流れを
+        より分かりやすく表現できます。
+      </p>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2 class="section-title">AIへの指示例</h2>
+    <div class="content-box">
+      <pre><code>「以下の要素を含むインフォグラフィックを作成してください：
+- データの視覚化（グラフ、チャート）
+- プロセスの図示（フローチャート、タイムライン）
+- 数値の強調表示
+- 分かりやすいアイコン
+- 効果的な色分け」</code></pre>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2 class="section-title">使用に適したシーン</h2>
+    <div class="content-box">
+      <ul>
+        <li>統計データの表示</li>
+        <li>手順やプロセスの説明</li>
+        <li>比較情報の提示</li>
+        <li>調査結果のレポート</li>
+        <li>企業の実績紹介</li>
+      </ul>
+    </div>
+  </div>
+</DocsLayout>

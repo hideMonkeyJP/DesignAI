@@ -1,0 +1,87 @@
+---
+import DocsLayout from '../layouts/DocsLayout.astro';
+import DemoContainer from '../components/DemoContainer.astro';
+import DiagonalGridDemo from '../components/DiagonalGridDemo.astro';
+---
+
+<DocsLayout title="対角線グリッド - デザインAI">
+  <h1 class="page-title">12. 対角線グリッド</h1>
+
+  <div class="section">
+    <div class="content-box">
+      <h2 class="section-title">対角線グリッドの特徴</h2>
+      <p>
+        対角線グリッドは、従来の直線的なレイアウトに斜めの要素を
+        取り入れることで、ダイナミックな視覚効果を生み出す
+        デザインテクニックです。
+      </p>
+    </div>
+
+    <DemoContainer title="対角線グリッドのデモ">
+      <DiagonalGridDemo />
+    </DemoContainer>
+
+    <div class="tip-box">
+      <strong>💡 デザインのポイント:</strong>
+      対角線の角度は控えめに設定し、読みやすさとバランスを
+      保つことが重要です。
+    </div>
+  </div>
+
+  <div class="section">
+    <h2 class="section-title">実装のポイント</h2>
+    <div class="content-box">
+      <h3>1. 変形の活用</h3>
+      <p>
+        CSSのtransform: skew()プロパティを使用して、
+        要素に斜めの効果を適用します。過度な歪みは
+        避け、適度な角度を維持します。
+      </p>
+
+      <h3>2. レイアウトの構成</h3>
+      <p>
+        グリッドレイアウトを基本に、対角線の方向性を
+        考慮した配置を行います。視線の流れを意識した
+        デザインが効果的です。
+      </p>
+
+      <h3>3. アニメーション</h3>
+      <p>
+        ホバー時やスクロール時に、対角線の動きを
+        活かしたアニメーションを追加することで、
+        より印象的な演出が可能です。
+      </p>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2 class="section-title">AIへの指示例</h2>
+    <div class="content-box">
+      <pre><code>「対角線を活用したダイナミックなレイアウトを作成してください。
+以下の要素を含めてください：
+- 斜めのグリッドレイアウト
+- 適度な傾斜角度
+- インタラクティブな動き
+- コンテンツの視認性への配慮
+- モダンな印象のデザイン」</code></pre>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2 class="section-title">使用に適したシーン</h2>
+    <div class="content-box">
+      <ul>
+        <li>クリエイティブなポートフォリオ</li>
+        <li>デジタルエージェンシーのウェブサイト</li>
+        <li>革新的な製品のランディングページ</li>
+        <li>アート系のギャラリーサイト</li>
+        <li>ファッションブランドのプロモーション</li>
+        <li>音楽イベントのウェブサイト</li>
+        <li>ゲームのティーザーサイト</li>
+        <li>スポーツブランドのキャンペーンページ</li>
+        <li>建築デザインのショーケース</li>
+        <li>テクノロジー企業の製品紹介</li>
+      </ul>
+    </div>
+  </div>
+</DocsLayout>

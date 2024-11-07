@@ -1,0 +1,79 @@
+---
+import DocsLayout from '../layouts/DocsLayout.astro';
+import DemoContainer from '../components/DemoContainer.astro';
+import LandingDemo from '../components/LandingDemo.astro';
+---
+
+<DocsLayout title="シングルページデザイン - デザインAI">
+  <h1 class="page-title">9. シングルページデザイン</h1>
+
+  <div class="section">
+    <div class="content-box">
+      <h2 class="section-title">シングルページデザインの特徴</h2>
+      <p>
+        シングルページデザインは、すべての情報を1つのページに集約し、
+        スクロールによって順序立てて情報を提示する手法です。
+        ユーザーの行動を自然に誘導し、高いコンバージョン率を実現できます。
+      </p>
+    </div>
+
+    <DemoContainer title="シングルページデザインのデモ">
+      <LandingDemo />
+    </DemoContainer>
+
+    <div class="tip-box">
+      <strong>💡 デザインのポイント:</strong>
+      セクション間の視覚的な区切りを明確にし、ストーリー性のある
+      コンテンツの流れを作ることが重要です。
+    </div>
+  </div>
+
+  <div class="section">
+    <h2 class="section-title">実装のポイント</h2>
+    <div class="content-box">
+      <h3>1. セクション構成</h3>
+      <p>
+        各セクションは明確な目的を持ち、視覚的な階層構造を
+        作ることで、情報の理解を促進します。
+      </p>
+
+      <h3>2. スクロールインジケーター</h3>
+      <p>
+        ユーザーにスクロールを促すための視覚的なキューを
+        配置することで、コンテンツの続きがあることを示唆します。
+      </p>
+
+      <h3>3. レスポンシブ対応</h3>
+      <p>
+        様々な画面サイズで適切に表示されるよう、
+        フレックスボックスやグリッドレイアウトを活用します。
+      </p>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2 class="section-title">AIへの指示例</h2>
+    <div class="content-box">
+      <pre><code>「縦スクロール主体のランディングページを作成してください。
+以下の要素を含めてください：
+- インパクトのあるヒーローセクション
+- 特徴を説明するセクション
+- 明確なCTAセクション
+- スムーズなスクロールアニメーション
+- レスポンシブ対応」</code></pre>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2 class="section-title">使用に適したシーン</h2>
+    <div class="content-box">
+      <ul>
+        <li>製品やサービスのランディングページ</li>
+        <li>キャンペーンサイト</li>
+        <li>ポートフォリオサイト</li>
+        <li>イベント告知ページ</li>
+        <li>アプリケーションの紹介ページ</li>
+      </ul>
+    </div>
+  </div>
+</DocsLayout>

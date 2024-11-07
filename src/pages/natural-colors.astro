@@ -1,0 +1,84 @@
+---
+import DocsLayout from '../layouts/DocsLayout.astro';
+import DemoContainer from '../components/DemoContainer.astro';
+import NaturalColorsDemo from '../components/NaturalColorsDemo.astro';
+---
+
+<DocsLayout title="ナチュラルカラー - デザインAI">
+  <h1 class="page-title">6. ナチュラルカラー</h1>
+
+  <div class="section">
+    <div class="content-box">
+      <h2 class="section-title">ナチュラルカラーの特徴</h2>
+      <p>
+        ナチュラルカラーは、自然界に存在する色彩から着想を得た配色スキームです。
+        ベージュやペールグリーンを基調とし、温かみと安らぎを感じさせる
+        デザインを実現します。
+      </p>
+    </div>
+
+    <DemoContainer title="ナチュラルカラーのデモ">
+      <NaturalColorsDemo />
+    </DemoContainer>
+
+    <div class="tip-box">
+      <strong>💡 カラーパレットの例:</strong>
+      <ul>
+        <li>ベージュ: #E5D1B8</li>
+        <li>セージグリーン: #B5C9B7</li>
+        <li>クリーム: #F5E6D3</li>
+        <li>ウォームグレー: #8B7355</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2 class="section-title">実装のポイント</h2>
+    <div class="content-box">
+      <h3>1. 色彩の調和</h3>
+      <p>
+        自然界の色彩は互いに調和しているため、
+        ナチュラルカラーを組み合わせる際も、
+        彩度や明度のバランスに注意を払います。
+      </p>
+
+      <h3>2. グラデーション</h3>
+      <p>
+        自然な移行を表現するために、
+        緩やかなグラデーションを活用することで、
+        より有機的な印象を与えることができます。
+      </p>
+
+      <h3>3. テクスチャの活用</h3>
+      <p>
+        木目や布、紙などのテクスチャを組み合わせることで、
+        より豊かな表現が可能になります。
+      </p>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2 class="section-title">AIへの指示例</h2>
+    <div class="content-box">
+      <pre><code>「ナチュラルで温かみのある配色を使用したデザインを作成してください。
+以下の要素を含めてください：
+- ベージュやペールグリーンを基調とした配色
+- 自然な素材感を感じさせるテクスチャ
+- やわらかな印象のタイポグラフィ
+- 有機的なシェイプやパターン」</code></pre>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2 class="section-title">使用に適したシーン</h2>
+    <div class="content-box">
+      <ul>
+        <li>オーガニック製品のECサイト</li>
+        <li>ウェルネス関連のサービス</li>
+        <li>自然派コスメブランド</li>
+        <li>カフェやレストラン</li>
+        <li>ヨガスタジオやスパ</li>
+      </ul>
+    </div>
+  </div>
+</DocsLayout>
